@@ -31,12 +31,149 @@
 
   <!-- Custom CSS for Innovations -->
   <style>
+    /* Reduced top space for Hero Section */
+    #hero {
+      padding-top: 60px; /* Reduced from a larger value */
+    }
+
     #hero h1 {
       transition: color 0.3s ease-in-out;
       cursor: pointer;
     }
     #hero h1:hover {
       color: #0d6efd; /* Example hover color - a bootstrap primary blue */
+    }
+    
+    /* -- Innovative "Why Choose Us" Card Styles -- */
+    .services .service-item {
+      padding: 30px;
+      background: #ffffff;
+      height: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease-in-out;
+      text-align: center;
+    }
+    .services .service-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    }
+    .services .service-item .icon {
+      margin: 0 auto 20px auto;
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+    .services .service-item .icon i {
+      color: #fff;
+      font-size: 28px;
+      line-height: 0;
+    }
+    .services .service-item h3 {
+      font-weight: 700;
+      margin: 0 0 15px 0;
+      font-size: 20px;
+    }
+    .services .service-item p {
+      color: #6c757d;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* New Vision & Mission Section Styling */
+    #vision-mission {
+        background-color: #f8f9fa; /* A light grey background */
+    }
+    .vision-mission-box {
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+        height: 100%;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+    }
+    .vision-mission-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    }
+    .vision-mission-box .icon {
+        margin: 0 auto 25px auto;
+        width: 64px;
+        height: 64px;
+        background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .vision-mission-box .icon i {
+        color: #fff;
+        font-size: 32px;
+    }
+    .vision-mission-box h3 {
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #374251;
+    }
+    .vision-mission-box ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .vision-mission-box ul li {
+        padding-bottom: 15px;
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+    }
+     .vision-mission-box ul i {
+        font-size: 20px;
+        color: #0d6efd;
+        margin-right: 10px;
+        line-height: 1;
+    }
+    
+    /* -- Client Section Horizontal Scroll -- */
+    .client-scroll-container {
+      overflow-x: auto;
+      padding-bottom: 20px; /* Space for scrollbar */
+      scrollbar-width: thin;
+      scrollbar-color: #0d6efd #f1f1f1;
+    }
+    /* Webkit scrollbar styling */
+    .client-scroll-container::-webkit-scrollbar {
+      height: 8px;
+    }
+    .client-scroll-container::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    .client-scroll-container::-webkit-scrollbar-thumb {
+      background: #0d6efd;
+      border-radius: 10px;
+    }
+    .client-scroll-container::-webkit-scrollbar-thumb:hover {
+      background: #0b5ed7;
+    }
+    .client-logo-row {
+      display: flex;
+      flex-wrap: nowrap; /* Ensures logos stay in a single line */
+      align-items: center;
+    }
+    .client-logo-row .col {
+      flex: 0 0 160px; /* Ensures consistent width for each logo container */
+      padding: 0 15px;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+     .client-logo-row .col:hover {
+      filter: grayscale(0%);
     }
 
     /* Innovative Contact Section Styles */
@@ -105,6 +242,26 @@
         box-shadow: 0 6px 20px rgba(13, 110, 253, 0.6);
         transform: translateY(-2px);
     }
+
+    /* Follow Us Hover Effects */
+    .footer .social-links a {
+      transition: background 0.3s ease-in-out, background-color 0.3s ease;
+    }
+    .footer .social-links a i {
+        transition: color 0.3s ease-in-out;
+    }
+    .footer .social-links a:hover {
+        color: #ffffff; /* Make icon white on hover */
+    }
+    .footer .social-links a.twitter:hover { background-color: #1DA1F2; }
+    .footer .social-links a.facebook:hover { background-color: #1877F2; }
+    .footer .social-links a.instagram:hover { 
+        background: #d6249f;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    }
+    .footer .social-links a.youtube:hover { background-color: #FF0000; }
+    .footer .social-links a.linkedin:hover { background-color: #0A66C2; }
+
   </style>
 
 </head>
@@ -131,7 +288,7 @@
                 </ul>
               </li>
           <li><a href="#whychooseus">Why Choose Us</a></li> 
-          <li><a href="#vision">Vision & Mission</a></li> 
+          <li><a href="#vision-mission">Vision & Mission</a></li> 
           <li><a href="#ourclient">Our Client</a></li> 
           <li><a href="#">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -227,7 +384,7 @@
     </section><!-- /Stats Section -->
     
     <!-- Services Section -->
-    <section id="whychooseus" class="services section light-background">
+    <section id="whychooseus" class="services section">
       <div class="container section-title" data-aos="fade-up">
         <span>Why Choose Us</span>
         <h2>Why Choose Us</h2>
@@ -236,45 +393,45 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-activity"></i></div>
-              <a href="service-details.html" class="stretched-link"><h3>Commitment</h3></a>
-              <p>Skills India believes in designing high quality programs in its content and effective delivery. We ensures all programs are at pace with the changing business environment and its demands. We bring in the strength of intense networking and professionally updated knowledge systems. Skills India provides objective feedback through impartial training inquiries in the pre and post program stage and measure results to meet the matrix of metamorphosis goals</p>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-shield-check"></i></div>
+              <h3>Commitment</h3>
+              <p>We ensure high-quality program design and effective delivery, keeping pace with the changing business environment to meet metamorphosis goals with objective feedback.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-broadcast"></i></div>
-              <a href="service-details.html" class="stretched-link"><h3>Training Values</h3></a>
-              <p>Credible and Reliable Learning Partner Best Expertise to maximise potentials Customised content and delivery Multiple styles of learning and adoptions Focused to Industry Needs Cultural Ethos focused Contemporary and updated in content and delivery Participative, Explorative and Experiential Measurable delivery Vision based development inputs</p>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-gem"></i></div>
+              <h3>Training Values</h3>
+              <p>As a credible partner, we offer customized, industry-focused content and contemporary delivery using participative and experiential methods for measurable results.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-easel"></i></div>
-              <a href="service-details.html" class="stretched-link"><h3>Learning Culture</h3></a>
-              <p>Self realisation through emotional experiences Mutual learning and evaluation Be adventurous to explore the maximum Life long learning inputs for practice and consistent transformation Finding one's true self Self Emancipation through Self Empowerment Context oriented content Deliverables focused methodology</p>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-lightbulb"></i></div>
+              <h3>Learning Culture</h3>
+              <p>We foster self-realization and mutual learning through adventurous exploration, focusing on life-long inputs for consistent transformation and self-empowerment.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-bounding-box-circles"></i></div>
-              <a href="service-details.html" class="stretched-link"><h3>Our Expertise Covers</h3></a>
-              <p>Leadership Development, Personal Excellence, Team Development and Management, Creativity & Innovation, Sales & Marketing</p>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-person-check"></i></div>
+              <h3>Leadership & Personal Excellence</h3>
+              <p>Our expertise covers Leadership Development, Personal Excellence, Team Development and Management, fostering Creativity & Innovation, and enhancing Sales & Marketing.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-              <a href="service-details.html" class="stretched-link"><h3>Our Expertise Covers</h3></a>
-              <p>Supervisory Development, Train the Trainer Programs, Communication and Interpersonal Skill Development, Emotional and Social Intelligence, Performance Management</p>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-clipboard-data"></i></div>
+              <h3>Development & Performance</h3>
+              <p>We specialize in Supervisory Development, Train the Trainer Programs, Communication, Interpersonal Skills, Emotional Intelligence, and Performance Management.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-chat-square-text"></i></div>
-              <a href="service-details.html" class="stretched-link"><h3>Our Expertise Covers</h3></a>
-              <p>CRM & Service Excellence, General Administrative Areas, Human Resources, Organisational Development, Business Strategy and Management</p>
+            <div class="service-item">
+              <div class="icon"><i class="bi bi-briefcase"></i></div>
+              <h3>Strategy & HR</h3>
+              <p>Our services include CRM & Service Excellence, General Administrative Areas, Human Resources, Organisational Development, and Business Strategy and Management.</p>
             </div>
           </div>
         </div>
@@ -282,54 +439,37 @@
     </section><!-- /Services Section -->
 
     <!-- Vision & Mission Section -->
-    <section id="vision" class="testimonials section light-background">
+    <section id="vision-mission" class="vision-mission section">
       <div class="container section-title" data-aos="fade-up">
-        <span>Vision & Mission</span>
+        <span>Our Purpose</span>
         <h2>Vision & Mission</h2>
         <p>Empowering growth through expert training and smart consulting. To lead in transforming people and businesses for the future.</p>
       </div><!-- End Section Title -->
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper init-swiper" data-speed="600" data-delay="5000" data-breakpoints="{ "320": { "slidesPerView": 1, "spaceBetween": 40 }, "1200": { "slidesPerView": 3, "spaceBetween": 40 } }">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": { "delay": 5000 },
-              "slidesPerView": "auto",
-              "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true },
-              "breakpoints": {
-                "320": { "slidesPerView": 1, "spaceBetween": 40 },
-                "1200": { "slidesPerView": 3, "spaceBetween": 20 }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p><i class="bi bi-quote quote-icon-left"></i><span>Be a Most Preferred source for Professional Transformation</span><i class="bi bi-quote quote-icon-right"></i></p>
-                <h3>Skills India Vision</h3>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p><i class="bi bi-quote quote-icon-left"></i><span>Facilitate in maximising the Individual and Organizational potential to perform</span><i class="bi bi-quote quote-icon-right"></i></p>
-                <h3>Skills India Mission</h3>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p><i class="bi bi-quote quote-icon-left"></i><span>Facilitate in value realisation with utmost clarity and purpose</span><i class="bi bi-quote quote-icon-right"></i></p>
-                <h3>Skills India Mission</h3>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p><i class="bi bi-quote quote-icon-left"></i><span>Provide Measurable initiatives to meet metamorphosis targets</span><i class="bi bi-quote quote-icon-right"></i></p>
-                <h3>Skills India Vision</h3>
-              </div>
+      <div class="container">
+        <div class="row gy-4 justify-content-center">
+
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+            <div class="vision-mission-box">
+              <div class="icon"><i class="bi bi-bullseye"></i></div>
+              <h3>Our Vision</h3>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i><span>To be the most preferred source for professional transformation.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span>To provide measurable initiatives that meet metamorphosis targets.</span></li>
+              </ul>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
+
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200">
+            <div class="vision-mission-box">
+              <div class="icon"><i class="bi bi-rocket-takeoff-fill"></i></div>
+              <h3>Our Mission</h3>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i><span>To facilitate the maximization of individual and organizational potential.</span></li>
+                <li><i class="bi bi-check-circle-fill"></i><span>To facilitate value realization with utmost clarity and purpose.</span></li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </div>
     </section><!-- /Vision & Mission Section -->
@@ -342,28 +482,37 @@
         <h2>Our Clients</h2>
         <p>“Trusted by leading organizations across industries to drive growth, innovation, and excellence.”</p>
       </div><!-- End Section Title -->
-        <div class="row row-cols-2 row-cols-md-4 row-cols-lg-7 gy-6 justify-content-center">
-           <div class="text-center col" data-aos="zoom-in" data-aos-delay="100">
-              <img src="assets/img/anabond.png" alt="Anabond Client Logo">
-           </div>
-           <div class="text-center col" data-aos="zoom-in" data-aos-delay="200">
-              <img src="assets/img/aa.png" alt="Client AA Logo">
-           </div>
-           <div class="text-center col" data-aos="zoom-in" data-aos-delay="300">
-              <img src="assets/img/bb.png" alt="Client BB Logo">
-           </div>
-           <div class="text-center col" data-aos="zoom-in" data-aos-delay="400">
-              <img src="assets/img/cc.png" alt="Client CC Logo">
-           </div>
-           <div class="text-center col" data-aos="zoom-in" data-aos-delay="500">
-              <img src="assets/img/1.png" alt="Client 1 Logo">
-           </div>
-            <div class="text-center col" data-aos="zoom-in" data-aos-delay="600">
-              <img src="assets/img/2.png" alt="Client 2 Logo">
-           </div>
-            <div class="text-center col" data-aos="zoom-in" data-aos-delay="700">
-              <img src="assets/img/3.png" alt="Client 3 Logo">
-           </div>
+        <div class="client-scroll-container" data-aos="fade-up">
+            <div class="client-logo-row">
+               <div class="text-center col">
+                  <img src="assets/img/anabond.png" alt="Anabond Client Logo">
+               </div>
+               <div class="text-center col">
+                  <img src="assets/img/aa.png" alt="Client AA Logo">
+               </div>
+               <div class="text-center col">
+                  <img src="assets/img/bb.png" alt="Client BB Logo">
+               </div>
+               <div class="text-center col">
+                  <img src="assets/img/cc.png" alt="Client CC Logo">
+               </div>
+               <div class="text-center col">
+                  <img src="assets/img/1.png" alt="Client 1 Logo">
+               </div>
+                <div class="text-center col">
+                  <img src="assets/img/2.png" alt="Client 2 Logo">
+               </div>
+                <div class="text-center col">
+                  <img src="assets/img/3.png" alt="Client 3 Logo">
+               </div>
+               <!-- Add more client logos here to test scrolling -->
+                <div class="text-center col">
+                  <img src="assets/img/anabond.png" alt="Anabond Client Logo Duplicate">
+               </div>
+                <div class="text-center col">
+                  <img src="assets/img/aa.png" alt="Client AA Logo Duplicate">
+               </div>
+            </div>
         </div>
      </div>
     </section>
@@ -544,11 +693,11 @@
           <h4>Follow Us</h4>
           <p>Connect with us on social media for the latest insights in business transformation and corporate excellence.</p>
           <div class="social-links d-flex">
-            <a href="https://twitter.com/cxelango"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.youtube.com/channel/UCOFgn8iM9Gb8a9KOiqvaDqQ"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.facebook.com/skillsindiacoach"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.youtube.com/channel/UCOFgn8iM9Gb8a9KOiqvaDqQ"><i class="bi bi-youtube"></i></a>
-            <a href="https://www.linkedin.com/home?trk=nav_responsive_tab_home"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com/cxelango" class="twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.youtube.com/channel/UCOFgn8iM9Gb8a9KOiqvaDqQ" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/skillsindiacoach" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.youtube.com/channel/UCOFgn8iM9Gb8a9KOiqvaDqQ" class="youtube"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.linkedin.com/home?trk=nav_responsive_tab_home" class="linkedin"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
       </div>
