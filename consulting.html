@@ -28,6 +28,100 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom Styles for this Page -->
+  <style>
+    /* Push hero section up and adjust padding for content */
+    #hero {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    /* --- Hero H1 Hover Effect --- */
+    #hero h1 {
+      cursor: pointer;
+      transition: color 0.4s ease;
+      /* Define a fallback solid color */
+      color: #374251;
+    }
+
+    #hero h1:hover {
+      /* Apply gradient background and clip it to text */
+      background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent; /* Fallback for browsers without support */
+    }
+
+    /* Innovative Consulting Cards */
+    #featured-services {
+        padding: 80px 0;
+        background-color: #f9fafb; /* Light background for contrast */
+    }
+    .consulting-card {
+        background: #fff;
+        padding: 40px 30px;
+        border-radius: 15px;
+        height: 100%;
+        text-align: left;
+        border: 1px solid #eef0f2;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+        transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    .consulting-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        border-color: #0dcaf0;
+    }
+    .consulting-card .card-icon {
+        margin-bottom: 25px;
+    }
+    .consulting-card .card-icon i {
+        font-size: 48px;
+        line-height: 1;
+        background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .consulting-card h3 {
+        font-size: 22px;
+        font-weight: 700;
+        color: #374251;
+        margin-bottom: 20px;
+    }
+    .consulting-card p {
+        color: #6c757d;
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        flex-grow: 1; /* Pushes the button to the bottom */
+    }
+    .consulting-card p strong {
+        color: #374251;
+        display: block;
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+    .consulting-card .btn-custom {
+        background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+        color: #fff;
+        border-radius: 50px;
+        padding: 10px 30px;
+        transition: all 0.3s ease;
+        border: none;
+        align-self: flex-start;
+        font-weight: 500;
+        box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+    }
+    .consulting-card .btn-custom:hover {
+        background: linear-gradient(45deg, #0b5ed7, #0aa3c2);
+        box-shadow: 0 6px 20px rgba(13, 110, 253, 0.5);
+        transform: scale(1.05);
+    }
+  </style>
+
 </head>
 
 <body class="index-page">
@@ -108,56 +202,50 @@
     </section>
 
     <!-- Featured Services Section -->
-    <section id="featured-services" class="featured-services section py-5 bg-light">
-      <div class="container">
-        <div class="row gy-4 justify-content-center">
+    <section id="featured-services" class="featured-services section">
+        <div class="container">
 
-          <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item p-4 bg-white rounded-4 shadow-sm position-relative w-100">
-              <h3 class="h5 text-primary mb-3">Assignments Handled: Strategy & Structure</h3>
-              <p><strong>VISION & MISSION DEVELOPMENT</strong><br>
-                FMCG, Pharmaceuticals, Windmill, Consumer Durables & Garments</p>
-              <p><strong>ORGANIZATIONAL DIAGNOSTIC & DEVELOPMENT</strong><br>
-                FMCG, Textile, Media, Windmill & Manufacturing</p>
-              <p><strong>BRAND VALUATION REPORTS</strong><br>
-                Food Products, Readymade Garments, VOIP, Ecommerce & L&D</p>
-              <p><strong>COMPENSATION SURVEY & RESTRUCTURING</strong><br>
-                Finance, Chemicals, Appliances, Trucks, FMCG, Electronics, etc.</p>
-              <a href="contact.html" class="btn btn-outline-primary rounded-pill px-4 py-2 mt-3">Contact Us</a>
+            <div class="row gy-4">
+
+                <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="consulting-card">
+                        <div class="card-icon"><i class="bi bi-briefcase"></i></div>
+                        <h3>Strategic & Structural Consulting</h3>
+                        <p><strong>VISION & MISSION DEVELOPMENT:</strong> FMCG, Pharma, Windmill, Garments.<br>
+                            <strong>ORGANIZATIONAL DIAGNOSTICS:</strong> FMCG, Textile, Media, Manufacturing.<br>
+                            <strong>BRAND VALUATION:</strong> Food, Garments, E-commerce, L&D.<br>
+                            <strong>COMPENSATION SURVEY:</strong> Finance, Chemicals, FMCG, Electronics.</p>
+                        <a href="contact.html" class="btn-custom">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <div class="consulting-card">
+                        <div class="card-icon"><i class="bi bi-bullseye"></i></div>
+                        <h3>Marketing & People Operations</h3>
+                        <p><strong>HR MANUAL DEVELOPMENT:</strong> Finance, Chemicals, Auto, Windmills.<br>
+                            <strong>MARKETING STRATEGY:</strong> FMCG, Durables, VOIP, Garments.<br>
+                            <strong>CHANNEL EFFECTIVENESS:</strong> Food, Garments, OTC Products.<br>
+                            <strong>CONSUMER PERCEPTION:</strong> FMCG, Food, Durables.</p>
+                        <a href="contact.html" class="btn-custom">Explore Services</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="300">
+                    <div class="consulting-card">
+                        <div class="card-icon"><i class="bi bi-quote"></i></div>
+                        <h3>Our Guiding Principles</h3>
+                        <p><strong>"To get Game-Changing results, start focusing on Game-Changing thoughts."</strong> – Robin Sharma<br><br>
+                            <strong>"The price of anything is the amount of life you exchange for it."</strong> – Thoreau<br><br>
+                            <strong>"You are surrounded by simple, obvious solutions... you just don’t see them."</strong> – Jay Abraham</p>
+                        <a href="contact.html" class="btn-custom">Get Inspired</a>
+                    </div>
+                </div>
+
             </div>
-          </div>
-
-          <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item p-4 bg-white rounded-4 shadow-sm position-relative w-100">
-              <h3 class="h5 text-primary mb-3">Assignments Handled: Marketing & HR</h3>
-              <p><strong>HR MANUAL DEVELOPMENT</strong><br>
-                Finance, Chemicals, Appliances, Automobile, Windmills, FMCG</p>
-              <p><strong>MARKETING STRATEGY STUDIES</strong><br>
-                FMCG, Durables, VOIP, Garments</p>
-              <p><strong>MARKETING CHANNEL EFFECTIVENESS</strong><br>
-                Food, Garments, OTC Products</p>
-              <p><strong>CONSUMER PERCEPTION STUDIES</strong><br>
-                FMCG, Food, Durables</p>
-              <p><strong>INSTITUTIONAL CUSTOMER FEEDBACK</strong><br>
-                 Industry: Lubricants / Cables</p>
-              <a href="contact.html" class="btn btn-outline-primary rounded-pill px-4 py-2 mt-3">Contact Us</a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item p-4 bg-white rounded-4 shadow-sm position-relative w-100">
-              <h3 class="h5 text-primary">Inspiring Quotes</h3>
-              <p><strong>“To get Game-Changing results, start focusing on Game-Changing thoughts.”</strong><br>– Robin Sharma</p>
-              <p><strong>“The price of anything is the amount of life you exchange for it.”</strong><br>– Thoreau</p>
-              <p><strong>“You are surrounded by simple, obvious solutions... you just don’t see them.”</strong><br>– Jay Abraham</p>
-              <p><strong>“Strategy isn’t about having all the answers — it’s about knowing which questions change the game.”</strong><br>– Skills India</p>
-              <a href="contact.html" class="btn btn-outline-primary rounded-pill px-4 py-2 mt-3">Get Inspired</a>
-            </div>
-          </div>
-
         </div>
-      </div>
     </section>
+
 
     <!-- Marketing Consulting Section -->
     <section id="marketing-consulting" class="about section">

@@ -176,6 +176,21 @@
       filter: grayscale(0%);
     }
 
+    /* Media query to disable horizontal scroll on large screens */
+    @media (min-width: 992px) {
+      .client-scroll-container {
+        overflow-x: hidden; /* Hide horizontal overflow */
+        padding-bottom: 0; /* Remove space for scrollbar */
+      }
+      .client-scroll-container::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Webkit browsers */
+      }
+      .client-logo-row {
+        flex-wrap: wrap; /* Allow logos to wrap to the next line */
+        justify-content: center; /* Center the logos in the container */
+      }
+    }
+
     /* Innovative Contact Section Styles */
     .contact .info-item-box {
       background-color: #f8f9fa;
@@ -331,7 +346,7 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/who we are.jpg" class="img-fluid" alt="The Skills India team during a strategic consulting session">
+            <img src="assets/img/a.jpg" class="img-fluid" alt="The Skills India team during a strategic consulting session">
             <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
           </div>
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
@@ -341,10 +356,9 @@
             </p>
            <ul>
               <li><i class="bi bi-check2-all"></i> <span><b>Pioneers Since 1994:</b> With three decades of experience, we’ve been at the forefront of empowering professionals and organizations through skill development and strategic consulting.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span><b>Diverse Clientele:</b> We serve a broad spectrum of clients, including Fortune-listed MNCs, large corporates, private companies, political parties, and NGOs.</span></li>
             </ul>
-            <p>
-             Our clients are spread across India and abroad from various social segments. They are Fortune listed MNCs, Large corporates, Public & Private companies, Political parties and NGOs.
-            </p>
+           
             <p>Our Commitment & our Client's Trust in our deliverables are our major strengths. Download <a href="#">Our brochure.</a></p>
           </div>
         </div>
