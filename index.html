@@ -6,9 +6,9 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
   <!-- SEO Optimized Meta Tags -->
-  <title>Management Consulting, M&A, & Corporate Training | Skills India</title>
-  <meta name="description" content="Skills India, a leading Chennai-based consultancy since 1994, offers expert management consulting, M&A advisory, and transformative corporate training to drive business growth and excellence.">
-  <meta name="keywords" content="Management consulting Chennai, M&A advisory services India, Corporate leadership training India, Business transformation consultants, Strategic business consulting, Organizational development experts, Skills India consultants">
+  <title>Spoken English, Management Consulting, & M&A | Skills India</title>
+  <meta name="description" content="Skills India offers expert Spoken English courses, management consulting, M&A advisory, and corporate training to drive personal and business growth.">
+  <meta name="keywords" content="Spoken English course Chennai, Management consulting, M&A advisory services India, Corporate leadership training India, Business transformation consultants, Skills India">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -29,254 +29,165 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Custom CSS for Innovations -->
+  <!-- Custom CSS with New Color Scheme -->
   <style>
-    /* Reduced top space for Hero Section */
-    #hero {
-      padding-top: 60px; /* Reduced from a larger value */
+    #hero{padding-top:60px}
+    #hero h1{transition:color .3s ease-in-out;cursor:pointer}
+    #hero h1:hover{color:#0d6efd}
+    
+    .services .service-item{padding:30px;background:#fff;height:100%;border-radius:10px;box-shadow:0 4px 25px rgba(0,0,0,.08);transition:all .3s ease-in-out;text-align:center}
+    .services .service-item:hover{transform:translateY(-10px);box-shadow:0 10px 40px rgba(0,0,0,.12)}
+    .services .service-item .icon{margin:0 auto 20px auto;width:64px;height:64px;background:linear-gradient(45deg,#0d6efd,#0dcaf0);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .3s}
+    .services .service-item .icon i{color:#fff;font-size:28px;line-height:0}
+    .services .service-item h3{font-weight:700;margin:0 0 15px 0;font-size:20px}
+    .services .service-item p{color:#6c757d;font-size:15px;line-height:1.6}
+    
+    #vision-mission{background-color:#f8f9fa}
+    .vision-mission-box{padding:30px;background:#fff;border-radius:10px;box-shadow:0 4px 25px rgba(0,0,0,.08);height:100%;text-align:center;transition:all .3s ease-in-out}
+    .vision-mission-box:hover{transform:translateY(-10px);box-shadow:0 10px 40px rgba(0,0,0,.12)}
+    .vision-mission-box .icon{margin:0 auto 25px auto;width:64px;height:64px;background:linear-gradient(45deg,#0d6efd,#0dcaf0);border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .vision-mission-box .icon i{color:#fff;font-size:32px}
+    .vision-mission-box h3{font-weight:700;margin-bottom:20px;color:#374251}
+    .vision-mission-box ul{list-style:none;padding:0;margin:0}
+    .vision-mission-box ul li{padding-bottom:15px;display:flex;align-items:flex-start;text-align:left}
+    .vision-mission-box ul i{font-size:20px;color:#0d6efd;margin-right:10px;line-height:1}
+    
+    .clients .swiper-slide{text-align:center;display:flex;justify-content:center;align-items:center}
+    .clients .swiper-slide img{max-width:120px;width:100%;filter:grayscale(100%);opacity:.6;transition:all .3s ease}
+    .clients .swiper-slide:hover img{filter:grayscale(0%);opacity:1;transform:scale(1.1)}
+    
+    .contact .info-item-box{background-color:#f8f9fa;padding:30px;border-radius:10px;margin-bottom:24px;box-shadow:0 0 20px rgba(0,0,0,.08);transition:all .3s ease-in-out;display:flex;align-items:flex-start}
+    .contact .info-item-box:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,.1)}
+    .contact .info-item-box .icon{font-size:28px;color:#0d6efd;margin-right:20px;line-height:1}
+    .contact .info-item-box h3{font-size:18px;font-weight:700;margin-bottom:5px}
+    .contact .info-item-box p, .contact .info-item-box a{margin-bottom:0;font-size:15px;color:inherit;text-decoration:none}
+    .contact .map-container{margin-top:40px}
+    
+    .php-email-form .form-label{margin-bottom:.5rem;font-weight:600}
+    .php-email-form .form-control{border-radius:8px;border:1px solid #ced4da;transition:all .3s ease-in-out;padding:.75rem 1rem}
+    .php-email-form .form-control:focus{border-color:#86b7fe;box-shadow:0 0 0 .25rem rgba(13,110,253,.25)}
+    .php-email-form button[type=submit]{background:linear-gradient(45deg,#0d6efd,#0dcaf0);border:0;padding:12px 34px;color:#fff;transition:.4s;border-radius:50px;box-shadow:0 4px 15px rgba(13,110,253,.4)}
+    .php-email-form button[type=submit]:hover{background:linear-gradient(45deg,#0b5ed7,#0aa3c2);box-shadow:0 6px 20px rgba(13,110,253,.6);transform:translateY(-2px)}
+    
+    .footer .footer-contact a{color:inherit;text-decoration:none}
+    .footer .social-links a{transition:background .3s ease-in-out,background-color .3s ease}
+    .footer .social-links a i{transition:color .3s ease-in-out}
+    .footer .social-links a:hover{color:#fff}
+    .footer .social-links a.twitter:hover{background-color:#1da1f2}
+    .footer .social-links a.facebook:hover{background-color:#1877f2}
+    .footer .social-links a.instagram:hover{background:#d6249f;background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)}
+    .footer .social-links a.youtube:hover{background-color:#ff0000}
+    .footer .social-links a.linkedin:hover{background-color:#0a66c2}
+    
+    .footer .footer-contact p, .footer .footer-contact a {
+      font-size: 14px;
     }
 
-    #hero h1 {
-      transition: color 0.3s ease-in-out;
-      cursor: pointer;
+    /*--------------------------------------------------------------
+    # Spoken English Excellence Section (NEW COLOR THEME)
+    --------------------------------------------------------------*/
+    .spoken-english {
+      padding: 80px 0;
+      background: #f8f9fa;
     }
-    #hero h1:hover {
-      color: #0d6efd; /* Example hover color - a bootstrap primary blue */
+
+    .spoken-english .section-title h2 {
+      color: #374251;
+    }
+
+    .spoken-english .section-title p {
+      color: #6c757d;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
     
-    /* -- Innovative "Why Choose Us" Card Styles -- */
-    .services .service-item {
-      padding: 30px;
-      background: #ffffff;
-      height: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease-in-out;
+    .english-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 35px 30px;
       text-align: center;
+      height: 100%;
+      box-shadow: 0 5px 30px rgba(0,0,0,0.07);
+      transition: all 0.4s ease-in-out;
+      border: 2px solid transparent;
     }
-    .services .service-item:hover {
+    
+    .english-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+      border-color: #27F5E0; /* New Color */
     }
-    .services .service-item .icon {
-      margin: 0 auto 20px auto;
-      width: 64px;
-      height: 64px;
-      background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+
+    .english-card .icon {
+      margin: 0 auto 25px auto;
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #05C7A8, #27F5E0); /* New Gradient */
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: background 0.3s;
+      transition: all 0.3s ease;
     }
-    .services .service-item .icon i {
+
+    .english-card:hover .icon {
+      transform: scale(1.1) rotate(10deg);
+    }
+    
+    .english-card .icon i {
       color: #fff;
-      font-size: 28px;
-      line-height: 0;
+      font-size: 32px;
     }
-    .services .service-item h3 {
+
+    .english-card h3 {
       font-weight: 700;
-      margin: 0 0 15px 0;
-      font-size: 20px;
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #374251;
     }
-    .services .service-item p {
+
+    .english-card p {
+      font-size: 16px;
       color: #6c757d;
-      font-size: 15px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    /* New Vision & Mission Section Styling */
-    #vision-mission {
-        background-color: #f8f9fa; /* A light grey background */
-    }
-    .vision-mission-box {
-        padding: 30px;
-        background: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
-        height: 100%;
-        text-align: center;
-        transition: all 0.3s ease-in-out;
-    }
-    .vision-mission-box:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
-    }
-    .vision-mission-box .icon {
-        margin: 0 auto 25px auto;
-        width: 64px;
-        height: 64px;
-        background: linear-gradient(45deg, #0d6efd, #0dcaf0);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .vision-mission-box .icon i {
-        color: #fff;
-        font-size: 32px;
-    }
-    .vision-mission-box h3 {
-        font-weight: 700;
-        margin-bottom: 20px;
-        color: #374251;
-    }
-    .vision-mission-box ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    .vision-mission-box ul li {
-        padding-bottom: 15px;
-        display: flex;
-        align-items: flex-start;
-        text-align: left;
-    }
-     .vision-mission-box ul i {
-        font-size: 20px;
-        color: #0d6efd;
-        margin-right: 10px;
-        line-height: 1;
-    }
-    
-    /* -- Client Section Horizontal Scroll -- */
-    .client-scroll-container {
-      overflow-x: auto;
-      padding-bottom: 20px; /* Space for scrollbar */
-      scrollbar-width: thin;
-      scrollbar-color: #0d6efd #f1f1f1;
-    }
-    /* Webkit scrollbar styling */
-    .client-scroll-container::-webkit-scrollbar {
-      height: 8px;
-    }
-    .client-scroll-container::-webkit-scrollbar-track {
-      background: #f1f1f1;
-      border-radius: 10px;
-    }
-    .client-scroll-container::-webkit-scrollbar-thumb {
-      background: #0d6efd;
-      border-radius: 10px;
-    }
-    .client-scroll-container::-webkit-scrollbar-thumb:hover {
-      background: #0b5ed7;
-    }
-    .client-logo-row {
-      display: flex;
-      flex-wrap: nowrap; /* Ensures logos stay in a single line */
+    .btn-innovative {
+      display: inline-flex;
       align-items: center;
-    }
-    .client-logo-row .col {
-      flex: 0 0 160px; /* Ensures consistent width for each logo container */
-      padding: 0 15px;
-      filter: grayscale(100%);
-      transition: filter 0.3s ease;
-    }
-     .client-logo-row .col:hover {
-      filter: grayscale(0%);
-    }
-
-    /* Media query to disable horizontal scroll on large screens */
-    @media (min-width: 992px) {
-      .client-scroll-container {
-        overflow-x: hidden; /* Hide horizontal overflow */
-        padding-bottom: 0; /* Remove space for scrollbar */
-      }
-      .client-scroll-container::-webkit-scrollbar {
-        display: none; /* Hide scrollbar for Webkit browsers */
-      }
-      .client-logo-row {
-        flex-wrap: wrap; /* Allow logos to wrap to the next line */
-        justify-content: center; /* Center the logos in the container */
-      }
-    }
-
-    /* Innovative Contact Section Styles */
-    .contact .info-item-box {
-      background-color: #f8f9fa;
-      padding: 30px;
-      border-radius: 10px;
-      margin-bottom: 24px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease-in-out;
-      display: flex;
-      align-items: flex-start;
-    }
-    .contact .info-item-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-    .contact .info-item-box .icon {
-      font-size: 28px;
-      color: #0d6efd;
-      margin-right: 20px;
-      line-height: 1;
-    }
-    .contact .info-item-box h3 {
-      font-size: 18px;
+      justify-content: center;
+      padding: 14px 40px;
+      font-size: 16px;
       font-weight: 700;
-      margin-bottom: 5px;
-    }
-    .contact .info-item-box p {
-      margin-bottom: 0;
-      font-size: 15px;
-    }
-    .contact .map-container {
-      margin-top: 40px;
-    }
-    
-    /* Innovative Form Styling */
-    .php-email-form .form-label {
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-    }
-    .php-email-form .form-control {
-        border-radius: 8px; 
-        border: 1px solid #ced4da;
-        transition: all 0.3s ease-in-out;
-        padding: 0.75rem 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #fff;
+      background-image: linear-gradient(to right, #05C7A8, #27F5E0, #05C7A8); /* New Gradient */
+      background-size: 200% auto;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 5px 20px rgba(39, 245, 224, 0.4); /* New Color Shadow */
+      transition: all 0.5s ease;
+      text-decoration: none;
+      margin-top: 20px;
     }
     
-    .php-email-form .form-control:focus {
-        border-color: #86b7fe;
-        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-    }
-
-    .php-email-form button[type="submit"] {
-        background: linear-gradient(45deg, #0d6efd, #0dcaf0);
-        border: 0;
-        padding: 12px 34px;
-        color: #fff;
-        transition: 0.4s;
-        border-radius: 50px;
-        box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+    .btn-innovative:hover {
+      background-position: right center;
+      color: #fff;
+      box-shadow: 0 10px 30px rgba(39, 245, 224, 0.6); /* New Color Shadow on Hover */
+      transform: translateY(-3px);
     }
     
-    .php-email-form button[type="submit"]:hover {
-        background: linear-gradient(45deg, #0b5ed7, #0aa3c2);
-        box-shadow: 0 6px 20px rgba(13, 110, 253, 0.6);
-        transform: translateY(-2px);
+    .btn-innovative .btn-icon {
+      margin-left: 10px;
+      transition: transform 0.3s ease;
     }
-
-    /* Follow Us Hover Effects */
-    .footer .social-links a {
-      transition: background 0.3s ease-in-out, background-color 0.3s ease;
+    
+    .btn-innovative:hover .btn-icon {
+      transform: translateX(5px);
     }
-    .footer .social-links a i {
-        transition: color 0.3s ease-in-out;
-    }
-    .footer .social-links a:hover {
-        color: #ffffff; /* Make icon white on hover */
-    }
-    .footer .social-links a.twitter:hover { background-color: #1DA1F2; }
-    .footer .social-links a.facebook:hover { background-color: #1877F2; }
-    .footer .social-links a.instagram:hover { 
-        background: #d6249f;
-        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-    }
-    .footer .social-links a.youtube:hover { background-color: #FF0000; }
-    .footer .social-links a.linkedin:hover { background-color: #0A66C2; }
-
   </style>
 
 </head>
@@ -296,7 +207,7 @@
               <li class="dropdown"><a href="#"><span>Features</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="training.html">Training</a></li>
-                  <li><a href="#">Service</a></li>
+                  <li><a href="easy.index.html">Service</a></li>
                   <li><a href="consulting.html">Consulting</a></li>
                   <li><a href="M&A.html">M&A</a></li>
                   <li><a href="Blog.html">Blog</a></li>
@@ -305,7 +216,7 @@
           <li><a href="#whychooseus">Why Choose Us</a></li> 
           <li><a href="#vision-mission">Vision & Mission</a></li> 
           <li><a href="#ourclient">Our Client</a></li> 
-          <li><a href="#">Gallery</a></li>
+          <li><a href="#spoken-english">Spoken English</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -330,7 +241,7 @@
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="100">
-            <img src="assets/img/hero-img.png" class="img-fluid animated" alt="Illustration of business strategy and transformation for Skills India">
+            <img src="assets/img/flogo.png" class="img-fluid animated" alt="Illustration of business strategy and transformation for Skills India">
           </div>
         </div>
       </div>
@@ -397,60 +308,24 @@
       </div>
     </section><!-- /Stats Section -->
     
-    <!-- Services Section -->
+    <!-- Why Choose Us Section -->
     <section id="whychooseus" class="services section">
       <div class="container section-title" data-aos="fade-up">
         <span>Why Choose Us</span>
         <h2>Why Choose Us</h2>
         <p>"Empowering businesses with strategic insights, tailored solutions, and measurable growth since 1994."</p>
-      </div><!-- End Section Title -->
+      </div>
       <div class="container">
         <div class="row gy-4">
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item">
-              <div class="icon"><i class="bi bi-shield-check"></i></div>
-              <h3>Commitment</h3>
-              <p>We ensure high-quality program design and effective delivery, keeping pace with the changing business environment to meet metamorphosis goals with objective feedback.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item">
-              <div class="icon"><i class="bi bi-gem"></i></div>
-              <h3>Training Values</h3>
-              <p>As a credible partner, we offer customized, industry-focused content and contemporary delivery using participative and experiential methods for measurable results.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item">
-              <div class="icon"><i class="bi bi-lightbulb"></i></div>
-              <h3>Learning Culture</h3>
-              <p>We foster self-realization and mutual learning through adventurous exploration, focusing on life-long inputs for consistent transformation and self-empowerment.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item">
-              <div class="icon"><i class="bi bi-person-check"></i></div>
-              <h3>Leadership & Personal Excellence</h3>
-              <p>Our expertise covers Leadership Development, Personal Excellence, Team Development and Management, fostering Creativity & Innovation, and enhancing Sales & Marketing.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item">
-              <div class="icon"><i class="bi bi-clipboard-data"></i></div>
-              <h3>Development & Performance</h3>
-              <p>We specialize in Supervisory Development, Train the Trainer Programs, Communication, Interpersonal Skills, Emotional Intelligence, and Performance Management.</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item">
-              <div class="icon"><i class="bi bi-briefcase"></i></div>
-              <h3>Strategy & HR</h3>
-              <p>Our services include CRM & Service Excellence, General Administrative Areas, Human Resources, Organisational Development, and Business Strategy and Management.</p>
-            </div>
-          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100"><div class="service-item"><div class="icon"><i class="bi bi-shield-check"></i></div><h3>Commitment</h3><p>We ensure high-quality program design and effective delivery, keeping pace with the changing business environment to meet metamorphosis goals with objective feedback.</p></div></div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200"><div class="service-item"><div class="icon"><i class="bi bi-gem"></i></div><h3>Training Values</h3><p>As a credible partner, we offer customized, industry-focused content and contemporary delivery using participative and experiential methods for measurable results.</p></div></div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300"><div class="service-item"><div class="icon"><i class="bi bi-lightbulb"></i></div><h3>Learning Culture</h3><p>We foster self-realization and mutual learning through adventurous exploration, focusing on life-long inputs for consistent transformation and self-empowerment.</p></div></div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400"><div class="service-item"><div class="icon"><i class="bi bi-person-check"></i></div><h3>Leadership & Personal Excellence</h3><p>Our expertise covers Leadership Development, Personal Excellence, Team Development and Management, fostering Creativity & Innovation, and enhancing Sales & Marketing.</p></div></div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500"><div class="service-item"><div class="icon"><i class="bi bi-clipboard-data"></i></div><h3>Development & Performance</h3><p>We specialize in Supervisory Development, Train the Trainer Programs, Communication, Interpersonal Skills, Emotional Intelligence, and Performance Management.</p></div></div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600"><div class="service-item"><div class="icon"><i class="bi bi-briefcase"></i></div><h3>Strategy & HR</h3><p>Our services include CRM & Service Excellence, General Administrative Areas, Human Resources, Organisational Development, and Business Strategy and Management.</p></div></div>
         </div>
       </div>
-    </section><!-- /Services Section -->
+    </section><!-- /Why Choose Us Section -->
 
     <!-- Vision & Mission Section -->
     <section id="vision-mission" class="vision-mission section">
@@ -458,104 +333,90 @@
         <span>Our Purpose</span>
         <h2>Vision & Mission</h2>
         <p>Empowering growth through expert training and smart consulting. To lead in transforming people and businesses for the future.</p>
-      </div><!-- End Section Title -->
+      </div>
       <div class="container">
         <div class="row gy-4 justify-content-center">
-
-          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
-            <div class="vision-mission-box">
-              <div class="icon"><i class="bi bi-bullseye"></i></div>
-              <h3>Our Vision</h3>
-              <ul>
-                <li><i class="bi bi-check-circle-fill"></i><span>To be the most preferred source for professional transformation.</span></li>
-                <li><i class="bi bi-check-circle-fill"></i><span>To provide measurable initiatives that meet metamorphosis targets.</span></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200">
-            <div class="vision-mission-box">
-              <div class="icon"><i class="bi bi-rocket-takeoff-fill"></i></div>
-              <h3>Our Mission</h3>
-              <ul>
-                <li><i class="bi bi-check-circle-fill"></i><span>To facilitate the maximization of individual and organizational potential.</span></li>
-                <li><i class="bi bi-check-circle-fill"></i><span>To facilitate value realization with utmost clarity and purpose.</span></li>
-              </ul>
-            </div>
-          </div>
-
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100"><div class="vision-mission-box"><div class="icon"><i class="bi bi-bullseye"></i></div><h3>Our Vision</h3><ul><li><i class="bi bi-check-circle-fill"></i><span>To be the most preferred source for professional transformation.</span></li><li><i class="bi bi-check-circle-fill"></i><span>To provide measurable initiatives that meet metamorphosis targets.</span></li></ul></div></div>
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200"><div class="vision-mission-box"><div class="icon"><i class="bi bi-rocket-takeoff-fill"></i></div><h3>Our Mission</h3><ul><li><i class="bi bi-check-circle-fill"></i><span>To facilitate the maximization of individual and organizational potential.</span></li><li><i class="bi bi-check-circle-fill"></i><span>To facilitate value realization with utmost clarity and purpose.</span></li></ul></div></div>
         </div>
       </div>
     </section><!-- /Vision & Mission Section -->
 
-    <!-- Clients Section-->
-    <section id="ourclient" class="py-lg-8 py-6">
-     <div class="container py-lg-6">
+    <!-- Clients Section -->
+    <section id="ourclient" class="clients section">
+     <div class="container">
       <div class="container section-title" data-aos="fade-up">
         <span>Our Clients</span>
         <h2>Our Clients</h2>
         <p>“Trusted by leading organizations across industries to drive growth, innovation, and excellence.”</p>
-      </div><!-- End Section Title -->
-        <div class="client-scroll-container" data-aos="fade-up">
-            <div class="client-logo-row">
-               <div class="text-center col">
-                  <img src="assets/img/anabond.png" alt="Anabond Client Logo">
-               </div>
-               <div class="text-center col">
-                  <img src="assets/img/aa.png" alt="Client AA Logo">
-               </div>
-               <div class="text-center col">
-                  <img src="assets/img/bb.png" alt="Client BB Logo">
-               </div>
-               <div class="text-center col">
-                  <img src="assets/img/cc.png" alt="Client CC Logo">
-               </div>
-               <div class="text-center col">
-                  <img src="assets/img/1.png" alt="Client 1 Logo">
-               </div>
-                <div class="text-center col">
-                  <img src="assets/img/2.png" alt="Client 2 Logo">
-               </div>
-                <div class="text-center col">
-                  <img src="assets/img/3.png" alt="Client 3 Logo">
-               </div>
-               <!-- Add more client logos here to test scrolling -->
-                <div class="text-center col">
-                  <img src="assets/img/anabond.png" alt="Anabond Client Logo Duplicate">
-               </div>
-                <div class="text-center col">
-                  <img src="assets/img/aa.png" alt="Client AA Logo Duplicate">
-               </div>
+      </div>
+        <div class="swiper clients-swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper align-items-center">
+               <div class="swiper-slide"><img src="assets/img/anabond.png" class="img-fluid" alt="Anabond Client Logo"></div>
+               <div class="swiper-slide"><img src="assets/img/aa.png" class="img-fluid" alt="Client AA Logo"></div>
+               <div class="swiper-slide"><img src="assets/img/bb.png" class="img-fluid" alt="Client BB Logo"></div>
+               <div class="swiper-slide"><img src="assets/img/cc.png" class="img-fluid" alt="Client CC Logo"></div>
+               <div class="swiper-slide"><img src="assets/img/1.png" class="img-fluid" alt="Client 1 Logo"></div>
+               <div class="swiper-slide"><img src="assets/img/2.png" class="img-fluid" alt="Client 2 Logo"></div>
+               <div class="swiper-slide"><img src="assets/img/3.png" class="img-fluid" alt="Client 3 Logo"></div>
             </div>
         </div>
      </div>
-    </section>
+    </section> <!-- /Clients Section -->
   
-    <!-- Personal Coaching Section -->
-    <section id="personal-coaching" class="about section">
+    <!-- Spoken English Excellence Section -->
+    <section id="spoken-english" class="spoken-english section">
       <div class="container section-title" data-aos="fade-up">
-        <span>Personal Coaching<br></span>
-        <h2>Personal & Executive Coaching</h2>
-        <p>"Unlock your potential through personalized coaching designed to foster leadership and personal growth."</p>
-      </div><!-- End Section Title -->
+        <span>Speak with Confidence</span>
+        <h2>Spoken English Excellence</h2>
+        <p>Unlock your potential with our comprehensive Spoken English program, designed to take you from hesitation to fluent, confident communication.</p>
+      </div>
       <div class="container">
         <div class="row gy-4">
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
-           <img style="width: 50%; max-width: 200px;" src="assets/img/per1.jpg" alt="Personal coaching concept for goal clarity and growth" class="d-block mx-auto mb-3">
-            <h5 class="fst-italic">
-            To lead life as we aspire, we need to face up the constant challenges and changes. Our personal coaches have experience and exposure to support our clients in outgrowing themselves and their challenges.
-            </h5>
-              <p style="font-size: 17px;"><i class="bi bi-check2-all"></i><span><b>Goal Clarity:</b> Identify what truly matters and create a clear path forward.</span></p>
-               <p style="font-size: 17px;"><i class="bi bi-check2-all"></i> <span><b> Confidence Building:</b>  Overcome self-doubt and step into your strengths.</span></p>
-                <p style="font-size: 17px;"><i class="bi bi-check2-all"></i> <span><b>Skill Enhancement:</b> Develop key life and leadership skills for lasting growth.</span></p>
-                 <p style="font-size: 17px;"><i class="bi bi-check2-all"></i> <span><b>Accountability & Motivation:</b> Stay focused and supported every step of the way.</span></p>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="english-card">
+              <div class="icon"><i class="bi bi-mic-fill"></i></div>
+              <h3>Dynamic Speaking Practice</h3>
+              <p>Engage in interactive sessions, debates, and group discussions to actively build your speaking skills and fluency.</p>
+            </div>
           </div>
-          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/per2.jpg" class="img-fluid" alt="An individual receiving one-on-one executive coaching from a Skills India consultant">
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="english-card">
+              <div class="icon"><i class="bi bi-soundwave"></i></div>
+              <h3>Pronunciation & Accent</h3>
+              <p>Refine your pronunciation and reduce accent barriers with expert-led training and advanced audio tools.</p>
+            </div>
           </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="english-card">
+              <div class="icon"><i class="bi bi-people-fill"></i></div>
+              <h3>Real-World Scenarios</h3>
+              <p>Master communication for everyday situations, from professional meetings to casual conversations and public speaking.</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="english-card">
+              <div class="icon"><i class="bi bi-emoji-smile-fill"></i></div>
+              <h3>Confidence Building</h3>
+              <p>Overcome shyness and build unshakable confidence through a supportive environment and personalized feedback.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+          <a href="easy.index.html" class="btn-innovative">
+            Start Speaking Fluently
+            <span class="btn-icon"><i class="bi bi-arrow-right-short"></i></span>
+          </a>
         </div>
       </div>
-    </section><!-- /personal coaching -->
+    </section>
+    <!-- /Spoken English Excellence Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -563,34 +424,49 @@
         <span>Contact Us</span>
         <h2>Contact Our Expert Consultants</h2>
         <p>"Let’s turn ideas into impact. Reach out, and let’s build what’s next together."</p>
-      </div><!-- End Section Title -->
+      </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
           <div class="col-lg-5 d-flex flex-column justify-content-center">
+            
+            <!-- Address -->
             <div class="info-item-box" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-geo-alt icon"></i>
               <div>
                 <h3>Our Address</h3>
-                <p>New No 213, Valluvar Kottam High Road, Nungambakkam, Chennai - 600 034</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Skills+India+Consultants,New+No+213,+Valluvar+Kottam+High+Road,+Nungambakkam,+Chennai,+600034" target="_blank">
+                  <p>New No 213, Valluvar Kottam High Road, Nungambakkam, Chennai - 600 034</p>
+                </a>
               </div>
             </div>
+
+            <!-- Phone -->
             <div class="info-item-box" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-telephone icon"></i>
               <div>
                 <h3>Call Us</h3>
-                <p>(044) 2823 1154<br>+91 94440 79749</p>
+                <p>
+                  <a href="tel:+914428231154">(044) 2823 1154</a><br>
+                  <a href="tel:+919444079749">+91 94440 79749</a>
+                </p>
               </div>
             </div>
+
+            <!-- Email -->
             <div class="info-item-box" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-envelope icon"></i>
               <div>
                 <h3>Email Us</h3>
-                <p>cxelango@gmail.com</p>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cxelango@gmail.com" target="_blank">
+                  <p>cxelango@gmail.com</p>
+                </a>
               </div>
             </div>
+
           </div>
           <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+            <form action="https://api.web3forms.com/submit" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+               <input type="hidden" name="access_key" value="888eaa9d-247e-4a8b-a567-71ff77230a7c">
               <div class="row gy-4">
                 <div class="col-md-6">
                   <label for="name" class="form-label">Your Name</label>
@@ -642,27 +518,12 @@
           "addressRegion": "TN",
           "addressCountry": "IN"
         },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 13.0530207,
-          "longitude": 80.2421029
-        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 13.0530207, "longitude": 80.2421029 },
         "providesService": [
-            {
-                "@type": "Service",
-                "serviceType": "Management Consulting",
-                "provider": "Skills India Consultants"
-            },
-            {
-                "@type": "Service",
-                "serviceType": "Mergers and Acquisitions",
-                "provider": "Skills India Consultants"
-            },
-            {
-                "@type": "Service",
-                "serviceType": "Corporate Training",
-                "provider": "Skills India Consultants"
-            }
+            { "@type": "Service", "serviceType": "Management Consulting", "provider": "Skills India Consultants" },
+            { "@type": "Service", "serviceType": "Mergers and Acquisitions", "provider": "Skills India Consultants" },
+            { "@type": "Service", "serviceType": "Corporate Training", "provider": "Skills India Consultants" },
+            { "@type": "Service", "serviceType": "Spoken English Course", "provider": "Skills India Consultants" }
         ]
       }
       </script>
@@ -679,10 +540,12 @@
             <img src="assets/img/logo.svg" alt="Skills India Footer Logo">
           </a>
           <div class="footer-contact pt-3">
-            <p>New No 213, Valluvar Kottam High Road,</p>
-            <p>Nungambakkam, Chennai - 600 034</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>(044) 2823 1154</span></p>
-            <p><strong>Email:</strong> <span>cxelango@gmail.com</span></p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Skills+India+Consultants,New+No+213,+Valluvar+Kottam+High+Road,+Nungambakkam,+Chennai,+600034" target="_blank">
+              <p>New No 213, Valluvar Kottam High Road,</p>
+              <p>Nungambakkam, Chennai - 600 034</p>
+            </a>
+            <p class="mt-3"><strong>Phone:</strong> <span><a href="tel:+914428231154">(044) 2823 1154</a></span></p>
+            <p><strong>Email:</strong> <span><a href="https://mail.google.com/mail/?view=cm&fs=1&to=cxelango@gmail.com" target="_blank">cxelango@gmail.com</a></span></p>
           </div>
         </div>
         <div class="col-lg-2 col-md-3 footer-links">
@@ -697,8 +560,8 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Training</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#personal-coaching">Coaching</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#spoken-english">Spoken English</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Coaching</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">M&A</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Blog</a></li>
           </ul>
@@ -707,11 +570,11 @@
           <h4>Follow Us</h4>
           <p>Connect with us on social media for the latest insights in business transformation and corporate excellence.</p>
           <div class="social-links d-flex">
-            <a href="https://twitter.com/cxelango" class="twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.youtube.com/channel/UCOFgn8iM9Gb8a9KOiqvaDqQ" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.facebook.com/skillsindiacoach" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.youtube.com/channel/UCOFgn8iM9Gb8a9KOiqvaDqQ" class="youtube"><i class="bi bi-youtube"></i></a>
-            <a href="https://www.linkedin.com/home?trk=nav_responsive_tab_home" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com/cxelango" class="twitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.youtube.com/channel/UCOFgn8iM9Gb8a9KOiqvaDqQ" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/skillsindiacoach" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.youtube.com/channel/UCOFgn8iM9Gb8a9KOiqvaDqQ" class="youtube" target="_blank"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.linkedin.com/home?trk=nav_responsive_tab_home" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
       </div>
@@ -729,7 +592,6 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -739,6 +601,94 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Swiper Initialization for Clients Slider -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      new Swiper('.clients-swiper', {
+        speed: 600,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
+        },
+        slidesPerView: 'auto',
+        breakpoints: {
+          320: { slidesPerView: 3, spaceBetween: 40 },
+          480: { slidesPerView: 4, spaceBetween: 60 },
+          640: { slidesPerView: 5, spaceBetween: 80 },
+          992: { slidesPerView: 6, spaceBetween: 100 }
+        }
+      });
+    });
+  </script>
+  
+  <!-- Corrected Form Submission Script for Web3Forms -->
+  <script>
+    (function() {
+      "use strict";
+
+      /**
+       * Main function to handle the form submission
+       */
+      function handleFormSubmit(event) {
+        event.preventDefault(); // Stop the form from submitting the default way
+
+        const thisForm = event.target;
+        const action = thisForm.getAttribute('action');
+
+        // Get the feedback divs and loading indicator
+        const loading = thisForm.querySelector('.loading');
+        const errorMessage = thisForm.querySelector('.error-message');
+        const sentMessage = thisForm.querySelector('.sent-message');
+
+        // Clear previous messages and show loading indicator
+        loading.classList.add('d-block');
+        errorMessage.classList.remove('d-block');
+        sentMessage.classList.remove('d-block');
+
+        const formData = new FormData(thisForm);
+
+        // Use the fetch API to submit the form
+        fetch(action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json' // We expect a JSON response
+          }
+        })
+        .then(response => response.json()) // Parse the server's response as JSON
+        .then(data => {
+          loading.classList.remove('d-block');
+          // Check the 'success' property from the web3forms response
+          if (data.success) {
+            // On success, show the success message div
+            sentMessage.classList.add('d-block');
+            thisForm.reset(); // Clear the form fields
+          } else {
+            // On failure, show the error message div
+            errorMessage.innerHTML = data.message || 'An error occurred. Please try again.';
+            errorMessage.classList.add('d-block');
+          }
+        })
+        .catch(error => {
+          // This catches network errors
+          loading.classList.remove('d-block');
+          errorMessage.innerHTML = 'Could not send message. Please check your network connection.';
+          errorMessage.classList.add('d-block');
+          console.error('Submission Error:', error);
+        });
+      }
+
+      // Add the submit event listener to all forms with the .php-email-form class
+      const forms = document.querySelectorAll('.php-email-form');
+      forms.forEach(form => {
+        form.addEventListener('submit', handleFormSubmit);
+      });
+
+    })();
+  </script>
+  
 
 </body>
 

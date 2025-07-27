@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Innovative landing page for an English language class in Chennai, India.">
+    <meta name="author" content="Easy Fluency">
+
+    <title>Easy Fluency - Fluent English Starts Here!</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --royal-purple: #6A057F;
+            --electric-teal: #00F5D4;
+            --bright-magenta: #F72585;
+            --off-white: #F8F9FA;
+            --charcoal: #212529;
+            --white: #FFFFFF;
+
+            --primary-font: 'Poppins', sans-serif;
+            --secondary-font: 'Lato', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--secondary-font);
+            background-color: var(--off-white);
+            color: var(--charcoal);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--primary-font);
+            font-weight: 700;
+            color: var(--royal-purple);
+        }
+
+        .section-padding { padding: 100px 0; }
+
+        /* --- NAVBAR --- */
+        .navbar { background-color: rgba(248, 249, 250, 0.75); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+        .navbar-brand span { font-weight: 700; color: var(--royal-purple); }
+        .navbar-nav { width: 100%; justify-content: flex-end; }
+        .nav-link { color: var(--charcoal); font-weight: 600; padding: 8px 18px; margin: 0 5px; border-radius: 50px; transition: all 0.3s ease; }
+        .nav-link:hover, .nav-link.active { color: var(--royal-purple); background-color: rgba(0, 245, 212, 0.4); }
+
+        /* --- HERO SECTION --- */
+        @keyframes gradientAnimation { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .hero-section { background: linear-gradient(-45deg, #6a057f, #9d02a0, #00f5d4, #00b4d8); background-size: 400% 400%; animation: gradientAnimation 15s ease infinite; color: var(--white); padding: 120px 0; text-align: left; }
+        .hero-section h1 { font-weight: 700; color: var(--white); font-size: 3.5rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.3); transition: color 0.3s ease; }
+        .hero-section h1:hover { color: var(--electric-teal); }
+        
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
+        .hero-image { max-width: 100%; height: auto; animation: float 6s ease-in-out infinite; }
+
+        .btn-hero-primary { background-color: var(--white); color: var(--royal-purple); padding: 12px 30px; border-radius: 50px; font-weight: 700; transition: all 0.3s ease; border: 2px solid var(--white); }
+        .btn-hero-primary:hover { background-color: transparent; color: var(--white); transform: translateY(-3px); }
+        .btn-hero-secondary { background-color: transparent; color: var(--white); border: 2px solid var(--bright-magenta); padding: 12px 30px; border-radius: 50px; font-weight: 700; transition: all 0.3s ease; }
+        .btn-hero-secondary:hover { background-color: var(--bright-magenta); color: var(--white); transform: translateY(-3px); border-color: var(--bright-magenta); }
+        
+        /* --- WHY CHOOSE US SECTION --- */
+        .feature-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #eee;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .feature-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(106, 5, 127, 0.1); }
+        .feature-card .icon { font-size: 3rem; color: var(--electric-teal); margin-bottom: 1rem; }
+
+        /* --- FEEDBACK BY STUDENTS SECTION --- */
+        .feedback-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            border-top: 5px solid var(--electric-teal);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            text-align: center;
+        }
+        .feedback-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+        .feedback-card img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid var(--electric-teal); }
+        .feedback-card .quote { font-style: italic; color: var(--charcoal); }
+        .feedback-card .student-name { font-weight: 700; color: var(--royal-purple); margin-top: 1rem; }
+
+        /* --- INNOVATIVE SEGMENTED CONTACT INFO (PROPERLY ALIGNED) --- */
+        .contact-info-container { display: flex; flex-direction: column; gap: 1.25rem; }
+        .info-block { background: var(--white); padding: 20px; border-radius: 12px; display: flex; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .info-block:hover { transform: translateX(8px); box-shadow: 0 8px 25px rgba(106, 5, 127, 0.15); }
+        .info-block .icon { font-size: 1.8rem; color: var(--electric-teal); margin-right: 20px; min-width: 40px; }
+        .info-block .text-content { font-weight: 600; }
+        .info-block a { color: var(--charcoal); text-decoration: none; }
+        .info-block a:hover { color: var(--royal-purple); }
+
+        /* --- INNOVATIVE QUOTE SLIDER CARD --- */
+        .quote-slider-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+            overflow: hidden;
+            text-align: center;
+        }
+        .quote-slider-card .quotes-wrapper { overflow: hidden; }
+        .quote-slider-card .quote-track { display: flex; width: 300%; transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1); }
+        .quote-slider-card .quote { width: 33.333%; padding: 0 1rem; box-sizing: border-box; }
+        .quote-slider-card .quote-text { font-family: var(--primary-font); font-size: 1.15rem; font-style: italic; font-weight: 600; color: var(--royal-purple); line-height: 1.6; min-height: 100px; }
+        .quote-slider-card .quote-author { font-size: 1rem; color: var(--charcoal); margin-top: 1rem; font-weight: bold; }
+        .quote-slider-card .quote-nav { margin-top: 1.5rem; display: flex; justify-content: center; gap: 15px; }
+        .quote-slider-card .quote-nav label { width: 12px; height: 12px; border-radius: 50%; background: #ddd; cursor: pointer; transition: all 0.3s ease; }
+        .quote-slider-card .quote-nav label:hover { background: var(--bright-magenta); }
+        .quote-slider-card input[type="radio"] { display: none; }
+        #q1:checked ~ .quote-nav label[for="q1"],
+        #q2:checked ~ .quote-nav label[for="q2"],
+        #q3:checked ~ .quote-nav label[for="q3"] { background: var(--electric-teal); transform: scale(1.2); }
+        #q1:checked ~ .quotes-wrapper .quote-track { transform: translateX(0%); }
+        #q2:checked ~ .quotes-wrapper .quote-track { transform: translateX(-33.333%); }
+        #q3:checked ~ .quotes-wrapper .quote-track { transform: translateX(-66.666%); }
+
+        /* --- REAL-LIFE PRACTICE & CAREER BENEFITS CARDS --- */
+        .custom-card {
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            color: var(--white);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            height: 350px;
+        }
+        .custom-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .custom-card .card-content {
+            background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1));
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            transition: background 0.4s ease;
+        }
+        .custom-card:hover .card-content {
+            background: linear-gradient(to top, rgba(106, 5, 127, 0.9), rgba(0,0,0,0.2));
+        }
+        .custom-card h5 {
+            color: var(--white);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        .custom-card p {
+            color: var(--off-white);
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 0.4s ease, max-height 0.4s ease;
+        }
+        .custom-card:hover p {
+            opacity: 1;
+            max-height: 100px; /* Adjust as needed */
+        }
+    </style>
+</head>
+
+<body id="top" data-bs-spy="scroll" data-bs-target="#mainNav">
+
+    <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#top"><i class="bi-stars fs-4" style="color: var(--electric-teal);"></i> <span>Easy Fluency</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#practice">Practice</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why-us">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        
+    <main>
+        <section class="hero-section" id="home">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <h1>Fluent English Starts Here!</h1>
+                        <p class="lead my-4">With over 300+ active students, we are Chennai's trusted choice for building powerful communication skills.</p>
+                        <div class="mt-4 pt-2">
+                            <a href="#contact" class="btn btn-hero-primary">Join Now</a>
+                            <a href="#contact" class="btn btn-hero-secondary ms-2">Free Demo</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 d-none d-lg-block">
+                        <img src="asset/img/index-logo.png" alt="Online language learning illustration" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="about">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                     <div class="col-lg-6">
+                        <h2>Meet Your Mentor</h2>
+                        <p class="lead">Mr. C.X. Elango is not just a teacher; he's a dedicated language coach.</p>
+                        <p>With over 15 years of experience, he has a unique ability to simplify complex grammar and inspire confidence in his students. His teaching method focuses on interactive, real-world scenarios, ensuring that you not only learn English but also learn how to use it effectively in your personal and professional life. His success stories include students who have aced international interviews, earned promotions, and built global connections.</p>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                         <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=2071&auto=format&fit=crop" class="img-fluid rounded-circle shadow-lg" alt="English Mentor Mr. C.X. Elango">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses" class="section-padding bg-white"><div class="container"><h2 class="text-center">Our Courses</h2><p class="lead text-muted text-center">Detailed course information coming soon.</p></div></section>
+
+        <section class="section-padding" id="practice">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="mb-3">Real-Life Practice Activities</h2>
+                    <p class="lead text-muted">Engage in activities that build practical, real-world fluency.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="custom-card" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop');">
+                            <div class="card-content">
+                                <h5>Group Discussions</h5>
+                                <p>Debate current events and interesting topics to improve spontaneous speaking.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="custom-card" style="background-image: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop');">
+                            <div class="card-content">
+                                <h5>Mock Interviews</h5>
+                                <p>Practice for job interviews with personalized feedback to boost your confidence.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="custom-card" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop');">
+                            <div class="card-content">
+                                <h5>Presentations</h5>
+                                <p>Develop your public speaking skills by presenting on subjects you're passionate about.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="custom-card" style="background-image: url('https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop');">
+                            <div class="card-content">
+                                <h5>Role-Playing</h5>
+                                <p>Simulate everyday situations like ordering food or asking for directions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white" id="benefits">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="mb-3">Career & Life Benefits</h2>
+                    <p class="lead text-muted">Unlock new opportunities with fluent English.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="custom-card" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop');">
+                            <div class="card-content">
+                                <h5>Career Advancement</h5>
+                                <p>Secure promotions, lead international teams, and get better job opportunities.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="custom-card" style="background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop');">
+                            <div class="card-content">
+                                <h5>Global Networking</h5>
+                                <p>Connect with professionals and friends from all over the world.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="custom-card" style="background-image: url('https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=2106&auto=format&fit=crop');">
+                            <div class="card-content">
+                                <h5>Higher Education</h5>
+                                <p>Gain admission to international universities and excel in your studies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="custom-card" style="background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=1974&auto=format&fit=crop');">
+                            <div class="card-content">
+                                <h5>Travel & Culture</h5>
+                                <p>Travel with confidence and immerse yourself fully in different cultures.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="why-us">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="mb-3">Why Choose Us?</h2>
+                    <p class="lead text-muted">Discover the advantages that make us unique.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6"><div class="feature-card"><i class="bi bi-person-check-fill icon"></i><h5 class="card-title">Expert Mentorship</h5><p>Learn from Mr. C.X. Elango, an experienced trainer with a proven track record of success.</p></div></div>
+                    <div class="col-lg-4 col-md-6"><div class="feature-card"><i class="bi bi-lightbulb-fill icon"></i><h5 class="card-title">Practical Learning</h5><p>Our curriculum focuses on real-world scenarios, not just textbook theories.</p></div></div>
+                    <div class="col-lg-4 col-md-6"><div class="feature-card"><i class="bi bi-people-fill icon"></i><h5 class="card-title">Small Batch Sizes</h5><p>We ensure personalized attention for every student in a supportive environment.</p></div></div>
+                    <div class="col-lg-4 col-md-6"><div class="feature-card"><i class="bi bi-graph-up-arrow icon"></i><h5 class="card-title">Proven Results</h5><p>Join over 300+ students who have successfully enhanced their communication skills.</p></div></div>
+                    <div class="col-lg-4 col-md-6"><div class="feature-card"><i class="bi bi-patch-check-fill icon"></i><h5 class="card-title">Confidence Building</h5><p>Our core mission is to help you speak English fluently and with confidence.</p></div></div>
+                    <div class="col-lg-4 col-md-6"><div class="feature-card"><i class="bi bi-calendar-check-fill icon"></i><h5 class="card-title">Flexible Schedules</h5><p>We offer a range of timings and course options to fit your busy lifestyle.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white">
+            <div class="container">
+                 <div class="text-center mb-5">
+                    <h2 class="mb-3">Feedback From Our Students</h2>
+                    <p class="lead text-muted">See what our successful students have to say.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4"><div class="feedback-card"><p class="quote">"The best English class I've ever taken. The focus on practical skills was incredibly helpful for my career."</p><div class="student-name">- Priya K.</div></div></div>
+                    <div class="col-lg-4"><div class="feedback-card"><p class="quote">"I attended this class for four months, and the friendly teaching method made me feel truly comfortable. My English fluency improved day by day, which helped me confidently attract more clients in my freelancing career. This class played a major role in my growth in fact, it even helped me build this very website for our classes. I'm grateful for the support and the practical learning experience!"
+ </p><div class="student-name">-Zion Kumar, Freelance Web Developer</div></div></div>
+                    <div class="col-lg-4"><div class="feedback-card"><p class="quote">"A great place to learn and grow. The small batches made a huge difference. Highly recommended!"</p><div class="student-name">- Sunita M.</div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="contact">
+            <div class="container">
+                <h2 class="text-center mb-5">Start Your Journey Today</h2>
+                <div class="row g-5">
+                    <div class="col-lg-7">
+                        <div class="p-4 p-md-5" style="background: var(--off-white); border-radius: 15px; height: 100%;">
+                            <h4>Send a Message</h4>
+                            <p class="text-muted mb-4">We'll get back to you within 24 hours.</p>
+                            
+                            <!-- ====== FORM ACTIVATED WITH UPDATES ====== -->
+                            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                                <!-- YOUR ACCESS KEY -->
+                                <input type="hidden" name="access_key" value="888eaa9d-247e-4a8b-a567-71ff77230a7c">
+
+                                <!-- Form Inputs with name attributes and validation -->
+                                <div class="mb-3">
+                                    <label for="fullName" class="form-label">Full Name</label>
+                                    <input type="text" name="name" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="example@gmail.com" required pattern=".*@gmail\.com" title="Please enter a valid @gmail.com address.">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number (Optional)</label>
+                                    <input type="tel" name="phone" class="form-control" id="phone" placeholder="Enter your 10-digit phone number" pattern="\d{10}" title="Phone number must be exactly 10 digits.">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" name="subject" class="form-control" id="subject" placeholder="What is the subject?" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea name="message" class="form-control" id="message" rows="4" required placeholder="Tell us what you want to achieve..."></textarea>
+                                </div>
+                                
+                                <!-- Honeypot Spam Protection -->
+                                <input type="checkbox" name="botcheck" style="display: none;">
+
+                                <button type="submit" class="btn btn-hero-primary mt-3" style="background-color:var(--royal-purple); color:var(--white)">Send Message</button>
+                                
+                                <!-- Submission Result Message -->
+                                <div id="form-result" class="mt-3"></div>
+                            </form>
+                            <!-- ====== END OF ACTIVATED FORM ====== -->
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="p-4 p-md-5" style="background: var(--off-white); border-radius: 15px; height: 100%;">
+                             <h4>Contact & Info</h4>
+                             <p class="text-muted mb-4">Reach us directly or find inspiration below.</p>
+                            <div class="contact-info-container">
+                                <div class="info-block">
+                                    <i class="bi bi-telephone-fill icon"></i>
+                                    <div class="text-content"><a href="tel:04428231154">(044) 2823 1154</a></div>
+                                </div>
+                                <div class="info-block">
+                                    <i class="bi bi-phone-fill icon"></i>
+                                    <div class="text-content"><a href="tel:+919444079749">+91 94440 79749</a></div>
+                                </div>
+                                <div class="info-block">
+                                    <i class="bi bi-envelope-fill icon"></i>
+                                    <div class="text-content">
+                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cxelango@gmail.com" target="_blank" rel="noopener noreferrer">cxelango@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="info-block">
+                                    <i class="bi bi-geo-alt-fill icon"></i>
+                                    <div class="text-content">
+                                        <a href="https://www.google.com/maps/search/?api=1&query=New+No+213,+Valluvar+Kottam+High+Road,+Chennai,+600034" target="_blank" rel="noopener noreferrer">
+                                            New No 213, Valluvar Kottam High Road, Chennai, 600034
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- QUOTE SLIDER IS NOW INSIDE THIS CONTAINER -->
+                            <div class="quote-slider-card mt-4">
+                                <input type="radio" name="quote" id="q1" checked>
+                                <input type="radio" name="quote" id="q2">
+                                <input type="radio" name="quote" id="q3">
+                                
+                                <div class="quotes-wrapper">
+                                    <div class="quote-track">
+                                        <div class="quote"><p class="quote-text">"The limits of my language mean the limits of my world."</p><div class="quote-author">- L. Wittgenstein</div></div>
+                                        <div class="quote"><p class="quote-text">"To learn a language is to have one more window to look at the world."</p><div class="quote-author">- Chinese Proverb</div></div>
+                                        <div class="quote"><p class="quote-text">"Communication works for those who work at it."</p><div class="quote-author">- John Powell</div></div>
+                                    </div>
+                                </div>
+
+                                <div class="quote-nav">
+                                    <label for="q1" onmouseover="document.getElementById('q1').checked = true;"></label>
+                                    <label for="q2" onmouseover="document.getElementById('q2').checked = true;"></label>
+                                    <label for="q3" onmouseover="document.getElementById('q3').checked = true;"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" style="background-color: var(--royal-purple); color: var(--off-white); padding: 50px 0;">
+        <div class="container text-center">
+            <p class="mb-2">Copyright © 2025 Easy Fluency. All Rights Reserved.</p>
+            <a href="#home" style="color:var(--electric-teal)">Home</a> | <a href="#about" style="color:var(--electric-teal)">About</a> | <a href="#courses" style="color:var(--electric-teal)">Courses</a> | <a href="#practice" style="color:var(--electric-teal)">Practice</a> | <a href="#benefits" style="color:var(--electric-teal)">Benefits</a> | <a href="#why-us" style="color:var(--electric-teal)">Why Us</a> | <a href="#contact" style="color:var(--electric-teal)">Contact</a>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Active Nav Link Updater on Scroll
+        const mainNav = document.getElementById('mainNav');
+        if (mainNav) {
+            new bootstrap.ScrollSpy(document.body, {
+                target: '#mainNav',
+                offset: 75,
+            });
+        };
+
+        // ===== AJAX FORM SUBMISSION SCRIPT =====
+        const form = document.getElementById('contact-form');
+        const result = document.getElementById('form-result');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            result.innerHTML = "Please wait..."
+
+            fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let jsonResponse = await response.json();
+                    if (response.status == 200) {
+                        result.style.color = 'green';
+                        result.innerHTML = "Message sent successfully!";
+                    } else {
+                        console.log(response);
+                        result.style.color = 'red';
+                        result.innerHTML = jsonResponse.message || "Something went wrong!";
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    result.style.color = 'red';
+                    result.innerHTML = "Something went wrong!";
+                })
+                .then(function() {
+                    form.reset(); // This will create a new form
+                    setTimeout(() => {
+                        result.innerHTML = ''; // Clear the message after 3 seconds
+                    }, 3000);
+                });
+        });
+    </script>
+</body>
+</html>
