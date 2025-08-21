@@ -24,7 +24,6 @@
             --off-white: #F8F9FA;
             --charcoal: #212529;
             --white: #FFFFFF;
-            --skills-blue: #007bff; /* Added for the new link */
 
             --primary-font: 'Poppins', sans-serif;
             --secondary-font: 'Lato', sans-serif;
@@ -52,18 +51,6 @@
         .navbar-nav { width: 100%; justify-content: flex-end; }
         .nav-link { color: var(--charcoal); font-weight: 600; padding: 8px 18px; margin: 0 5px; border-radius: 50px; transition: all 0.3s ease; }
         .nav-link:hover, .nav-link.active { color: var(--royal-purple); background-color: rgba(0, 245, 212, 0.4); }
-
-        /* === NEW SKILLS INDIA LINK STYLE === */
-        .nav-link-skills-india {
-            color: var(--skills-blue) !important;
-            font-weight: 700;
-            border: 1px solid rgba(0, 123, 255, 0.3);
-        }
-        .nav-link-skills-india:hover {
-            color: var(--white) !important;
-            background: var(--skills-blue) !important;
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
-        }
 
         /* --- HERO SECTION --- */
         @keyframes gradientAnimation { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
@@ -308,9 +295,6 @@
                     <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
                     <li class="nav-item"><a class="nav-link" href="#why-us">Why Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <!-- ====== NEWLY ADDED SKILLS INDIA LINK ====== -->
-                    <li class="nav-item"><a class="nav-link nav-link-skills-india" href="index.html">Skills India</a></li>
-                    <!-- ============================================= -->
                 </ul>
             </div>
         </div>
@@ -344,7 +328,7 @@
                         <p>With over 15 years of experience, he has a unique ability to simplify complex grammar and inspire confidence in his students. His teaching method focuses on interactive, real-world scenarios, ensuring that you not only learn English but also learn how to use it effectively in your personal and professional life. His success stories include students who have aced international interviews, earned promotions, and built global connections.</p>
                     </div>
                     <div class="col-lg-6 text-center">
-                         <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=2071&auto=format&fit=crop" class="img-fluid rounded-circle shadow-lg" alt="English Mentor Mr. C.X. Elango">
+                         <img src="asset/img/teacher.png" class="img-fluid rounded-circle shadow-lg" alt="English Mentor Mr. C.X. Elango">
                     </div>
                 </div>
             </div>
@@ -462,10 +446,11 @@
                     <p class="lead text-muted">See what our successful students have to say.</p>
                 </div>
                 <div class="row g-4">
-                    <div class="col-lg-4"><div class="feedback-card"><p class="quote">"The best English class I've ever taken. The focus on practical skills was incredibly helpful for my career."</p><div class="student-name">- Priya K.</div></div></div>
+                    <div class="col-lg-4"><div class="feedback-card"><p class="quote">"My experience with this program was highly enriching. I gained valuable knowledge and improved my skills through engaging and well-structured sessions. The tutor maintained a positive and supportive atmosphere, encouraging participation and open discussion. The friendly yet professional environment made learning enjoyable for everyone. Overall, it was a rewarding experience that left a lasting positive impression."</p><div class="student-name">- Sukesh M, Business.</div></div></div>
+                     <div class="col-lg-4"><div class="feedback-card"><p class="quote">"This is truly a great place to learn and grow, both academically and personally. The small batch sizes created a more focused and interactive learning environment, allowing for individual attention and better engagement. This personalized approach made a significant difference in understanding concepts and building confidence. The supportive atmosphere and quality of teaching make it an excellent choice for anyone seeking meaningful learning experiences. Highly recommended!"</p><div class="student-name">- Sakthi vel K, cafe business</div></div></div>
                     <div class="col-lg-4"><div class="feedback-card"><p class="quote">"I attended this class for four months, and the friendly teaching method made me feel truly comfortable. My English fluency improved day by day, which helped me confidently attract more clients in my freelancing career. This class played a major role in my growth in fact, it even helped me build this very website for our classes. I'm grateful for the support and the practical learning experience!"
- </p><div class="student-name">-Zion Kumar, Freelance Web Developer</div></div></div>
-                    <div class="col-lg-4"><div class="feedback-card"><p class="quote">"A great place to learn and grow. The small batches made a huge difference. Highly recommended!"</p><div class="student-name">- Sunita M.</div></div></div>
+ </p><div class="student-name">-Zion Kumar R,  Fullstack Developer</div></div></div>
+                   
                 </div>
             </div>
         </section>
@@ -480,7 +465,7 @@
                             <p class="text-muted mb-4">We'll get back to you within 24 hours.</p>
                             
                             <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                                <input type="hidden" name="access_key" value="888eaa9d-247e-4a8b-a567-71ff77230a7c">
+                                <input type="hidden" name="access_key" value="d2d01053-a70e-45b0-85cd-6cc26d8a9e13">
                                 <div class="mb-3">
                                     <label for="fullName" class="form-label">Full Name</label>
                                     <input type="text" name="name" class="form-control" id="fullName" placeholder="Enter your full name" required>
@@ -520,12 +505,13 @@
                                     <i class="bi bi-phone-fill icon"></i>
                                     <div class="text-content"><a href="tel:+919444079749">+91 94440 79749</a></div>
                                 </div>
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cxelango@gmail.com" target="_blank" rel="noopener noreferrer">
                                 <div class="info-block">
                                     <i class="bi bi-envelope-fill icon"></i>
                                     <div class="text-content">
-                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cxelango@gmail.com" target="_blank" rel="noopener noreferrer">cxelango@gmail.com</a>
+                                        cxelango@gmail.com
                                     </div>
-                                </div>
+                                </div></a>
                                 <div class="info-block">
                                     <i class="bi bi-geo-alt-fill icon"></i>
                                     <div class="text-content">
@@ -558,15 +544,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- ====== INNOVATIVE BACK BUTTON IN CORRECT POSITION ====== -->
-                <div class="text-center pt-5 mt-5">
-                    <a href="index.html" class="btn-back-innovative">
-                        <i class="bi bi-arrow-left-circle me-2"></i> Go Back To Skills India
-                    </a>
-                </div>
-                <!-- ====================================================== -->
-                
             </div>
         </section>
     </main>
@@ -581,7 +558,7 @@
     <footer class="footer" style="background-color: var(--royal-purple); color: var(--off-white); padding: 50px 0;">
         <div class="container text-center">
             <p class="mb-2">Copyright © 2025 Easy Fluency. All Rights Reserved.</p>
-            <a href="#home" style="color:var(--electric-teal)">Home</a> | <a href="#about" style="color:var(--electric-teal)">About</a> | <a href="#courses" style="color:var(--electric-teal)">Courses</a> | <a href="#practice" style="color:var(--electric-teal)">Practice</a> | <a href="#benefits" style="color:var(--electric-teal)">Benefits</a> | <a href="#why-us" style="color:var(--electric-teal)">Why Us</a> | <a href="#contact" style="color:var(--electric-teal)">Contact</a> | <a href="index.html" style="color:var(--skills-blue); font-weight: bold;">Skills India</a>
+            <a href="#home" style="color:var(--electric-teal)">Home</a> | <a href="#about" style="color:var(--electric-teal)">About</a> | <a href="#courses" style="color:var(--electric-teal)">Courses</a> | <a href="#practice" style="color:var(--electric-teal)">Practice</a> | <a href="#benefits" style="color:var(--electric-teal)">Benefits</a> | <a href="#why-us" style="color:var(--electric-teal)">Why Us</a> | <a href="#contact" style="color:var(--electric-teal)">Contact</a>
         </div>
     </footer>
 
